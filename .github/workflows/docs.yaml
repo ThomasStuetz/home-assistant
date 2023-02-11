@@ -6,6 +6,8 @@ on:
       - 'main'
     paths:
       - asciidocs/**
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -24,8 +26,8 @@ jobs:
           slides: ${{ env.SLIDES }}
           inputPath: ${{ env.INPUTPATH }}
           outputPath: ${{ env.OUTPUTPATH }}
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           GITHUB_TOKEN: ${{ github.TOKEN }}
           BRANCH: ${{ env.BRANCH }}
