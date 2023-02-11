@@ -29,6 +29,6 @@ jobs:
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          GITHUB_TOKEN: ${{ github.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEPENDABOT }}
           BRANCH: ${{ env.BRANCH }}
           FOLDER: ${{ env.OUTPUTPATH }}
