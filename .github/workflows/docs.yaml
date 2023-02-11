@@ -7,7 +7,9 @@ on:
     paths:
       - asciidocs/**
 permissions:
+  pull-requests: write
   contents: write
+  repository-projects: write
 
 jobs:
   build:
@@ -29,6 +31,6 @@ jobs:
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          GITHUB_TOKEN: ${{ secrets.DEPENDABOT }}
+          GITHUB_TOKEN: ${{ github.TOKEN }}
           BRANCH: ${{ env.BRANCH }}
           FOLDER: ${{ env.OUTPUTPATH }}
