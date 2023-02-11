@@ -1,4 +1,47 @@
-= Index page
+= Home Assistant
+Thomas Stütz
+1.0.0, {docdate}
 ifndef::imagesdir[:imagesdir: images]
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+// :toc:
+// :toclevels: 1
+:experimental:
+//https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74?permalink_comment_id=3948218
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
-image::img.png[]
+== HassOS installieren
+
+* https://wiki.odroid.com/getting_started/petitboot/os_installation_using_otg#petitboot_setup_odroid[Petitboot setup(ODROID)^]
+* https://magazine.odroid.com/article/os-installation-using-petitboot-and-usb-otg/[OS Installation using Petitboot and USB OTG^]
+
+//--
+
+=== Odroid mit petitboot starten
+
+* Taster auf SPI umschalten (links)
+
+image::N2-OS-installation-using-Petitboot-figure-1.jpg[]
+
+
+* Exit to shell
+
+image::N2-OS-installation-using-Petitboot-figure-2.jpg[]
+
+* Den Odroid in den *USB mass storage mode* versetzen
+
+----
+ls /dev/mmc*
+ums /dev/mmcblk0
+----
+
+* USB-Kabel anschließen
+
+image::N2-OS-installation-using-Petitboot-figure-4.jpg[]
+
