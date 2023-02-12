@@ -438,6 +438,221 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge .cm {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cp {
+  color: #999999;
+  font-weight: bold;
+}
+pre.rouge .c1 {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+pre.rouge .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+pre.rouge .ge {
+  color: #000000;
+  font-style: italic;
+}
+pre.rouge .gr {
+  color: #aa0000;
+}
+pre.rouge .gh {
+  color: #999999;
+}
+pre.rouge .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+pre.rouge .go {
+  color: #888888;
+}
+pre.rouge .gp {
+  color: #555555;
+}
+pre.rouge .gs {
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #aaaaaa;
+}
+pre.rouge .gt {
+  color: #aa0000;
+}
+pre.rouge .kc {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kd {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kn {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kp {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kr {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kt {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .k, pre.rouge .kv {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .mf {
+  color: #009999;
+}
+pre.rouge .mh {
+  color: #009999;
+}
+pre.rouge .il {
+  color: #009999;
+}
+pre.rouge .mi {
+  color: #009999;
+}
+pre.rouge .mo {
+  color: #009999;
+}
+pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
+  color: #009999;
+}
+pre.rouge .sa {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .sb {
+  color: #d14;
+}
+pre.rouge .sc {
+  color: #d14;
+}
+pre.rouge .sd {
+  color: #d14;
+}
+pre.rouge .s2 {
+  color: #d14;
+}
+pre.rouge .se {
+  color: #d14;
+}
+pre.rouge .sh {
+  color: #d14;
+}
+pre.rouge .si {
+  color: #d14;
+}
+pre.rouge .sx {
+  color: #d14;
+}
+pre.rouge .sr {
+  color: #009926;
+}
+pre.rouge .s1 {
+  color: #d14;
+}
+pre.rouge .ss {
+  color: #990073;
+}
+pre.rouge .s, pre.rouge .dl {
+  color: #d14;
+}
+pre.rouge .na {
+  color: #008080;
+}
+pre.rouge .bp {
+  color: #999999;
+}
+pre.rouge .nb {
+  color: #0086B3;
+}
+pre.rouge .nc {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .no {
+  color: #008080;
+}
+pre.rouge .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+pre.rouge .ni {
+  color: #800080;
+}
+pre.rouge .ne {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nl {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nn {
+  color: #555555;
+}
+pre.rouge .nt {
+  color: #000080;
+}
+pre.rouge .vc {
+  color: #008080;
+}
+pre.rouge .vg {
+  color: #008080;
+}
+pre.rouge .vi {
+  color: #008080;
+}
+pre.rouge .nv, pre.rouge .vm {
+  color: #008080;
+}
+pre.rouge .ow {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .o {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .w {
+  color: #bbbbbb;
+}
+pre.rouge {
+  background-color: #f8f8f8;
+}
+</style>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
@@ -445,7 +660,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Thomas Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2023-02-11</span>
+<span id="revdate">2023-02-12</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -453,6 +668,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_hassos_installieren">1. HassOS installieren</a>
 <ul class="sectlevel2">
 <li><a href="#_odroid_mit_petitboot_starten">1.1. Odroid mit petitboot starten</a></li>
+<li><a href="#_emmc_flashen">1.2. emmc flashen</a></li>
+</ul>
+</li>
+<li><a href="#_add_ons">2. Add-Ons</a>
+<ul class="sectlevel2">
+<li><a href="#_samba_share">2.1. Samba share</a></li>
+<li><a href="#_mosquitto_broker">2.2. mosquitto broker</a></li>
+<li><a href="#_vsftpd">2.3. vsFTPD</a></li>
+</ul>
+</li>
+<li><a href="#_restore_eines_backups">3. Restore eines Backups</a>
+<ul class="sectlevel2">
+<li><a href="#_neuen_user_anlegen">3.1. Neuen User anlegen</a></li>
 </ul>
 </li>
 </ul>
@@ -477,9 +705,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
+<p>connect ethernet, keyboard and hdmi</p>
+</li>
+<li>
 <p>Taster auf SPI umschalten (links)</p>
 </li>
+<li>
+<p>Odroid mit Netzgerät einschalten</p>
+</li>
 </ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Niemals das emmc-Modul entfernen oder einstecken, wenn der odroid eingeschalten ist. Es könnte ein Hardware Defekt auftreten.
+</td>
+</tr>
+</table>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -524,13 +770,142 @@ ums /dev/mmcblk0</pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_emmc_flashen"><a class="anchor" href="#_emmc_flashen"></a>1.2. emmc flashen</h3>
+<details>
+<summary class="title">Etcher</summary>
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="images/etcher-01.png" alt="etcher 01">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/etcher-02.png" alt="etcher 02">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/etcher-03.png" alt="etcher 03">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/etcher-04.png" alt="etcher 04">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/etcher-05.png" alt="etcher 05">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/etcher-06.png" alt="etcher 06">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/etcher-07.png" alt="etcher 07">
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_ons"><a class="anchor" href="#_add_ons"></a>2. Add-Ons</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_samba_share"><a class="anchor" href="#_samba_share"></a>2.1. Samba share</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="yaml"><span class="na">username</span><span class="pi">:</span> <span class="s">leo01</span>
+<span class="na">password</span><span class="pi">:</span> <span class="s">passme</span>
+<span class="na">workgroup</span><span class="pi">:</span> <span class="s">WORKGROUP</span>
+<span class="na">compatibility_mode</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">veto_files</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">._*</span>
+  <span class="pi">-</span> <span class="s">.DS_Store</span>
+  <span class="pi">-</span> <span class="s">Thumbs.db</span>
+  <span class="pi">-</span> <span class="s">icon?</span>
+  <span class="pi">-</span> <span class="s">.Trashes</span>
+<span class="na">allow_hosts</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">10.0.0.0/8</span>
+  <span class="pi">-</span> <span class="s">172.16.0.0/12</span>
+  <span class="pi">-</span> <span class="s">192.168.0.0/16</span>
+  <span class="pi">-</span> <span class="s">fe80::/10</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mosquitto_broker"><a class="anchor" href="#_mosquitto_broker"></a>2.2. mosquitto broker</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="yaml"><span class="na">logins</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">require_certificate</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">certfile</span><span class="pi">:</span> <span class="s">fullchain.pem</span>
+<span class="na">keyfile</span><span class="pi">:</span> <span class="s">privkey.pem</span>
+<span class="na">customize</span><span class="pi">:</span>
+  <span class="na">active</span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">folder</span><span class="pi">:</span> <span class="s">mosquitto</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vsftpd"><a class="anchor" href="#_vsftpd"></a>2.3. vsFTPD</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="yaml"><span class="na">banner</span><span class="pi">:</span> <span class="s">Welcome to the Hass.io FTP service.</span>
+<span class="na">certfile</span><span class="pi">:</span> <span class="s">fullchain.pem</span>
+<span class="na">data_port</span><span class="pi">:</span> <span class="m">20</span>
+<span class="na">implicit_ssl</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">keyfile</span><span class="pi">:</span> <span class="s">privkey.pem</span>
+<span class="na">max_clients</span><span class="pi">:</span> <span class="m">5</span>
+<span class="na">pasv</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">pasv_address</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+<span class="na">pasv_max_port</span><span class="pi">:</span> <span class="m">30010</span>
+<span class="na">pasv_min_port</span><span class="pi">:</span> <span class="m">30000</span>
+<span class="na">port</span><span class="pi">:</span> <span class="m">21</span>
+<span class="na">ssl</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">users</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">addons</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">allow_chmod</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">allow_dirlist</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">allow_download</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">allow_upload</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">backup</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">config</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">media</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">password</span><span class="pi">:</span> <span class="s">passme</span>
+    <span class="na">share</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">ssl</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">leo01</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_restore_eines_backups"><a class="anchor" href="#_restore_eines_backups"></a>3. Restore eines Backups</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_neuen_user_anlegen"><a class="anchor" href="#_neuen_user_anlegen"></a>3.1. Neuen User anlegen</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/create-user.png" alt="create user">
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2023-02-11 19:04:31 UTC
+Last updated 2023-02-12 16:52:34 UTC
 </div>
 </div>
 </body>
