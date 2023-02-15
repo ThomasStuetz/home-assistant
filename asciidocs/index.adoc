@@ -4,8 +4,8 @@ Thomas Stütz
 ifndef::imagesdir[:imagesdir: images]
 :icons: font
 :sectnums:    // Nummerierung der Überschriften / section numbering
-// :toc:
-// :toclevels: 1
+:toc:
+:toclevels: 3
 :experimental:
 //https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74?permalink_comment_id=3948218
 ifdef::env-github[]
@@ -20,6 +20,7 @@ endif::[]
 
 * https://wiki.odroid.com/getting_started/petitboot/os_installation_using_otg#petitboot_setup_odroid[Petitboot setup(ODROID)^]
 * https://magazine.odroid.com/article/os-installation-using-petitboot-and-usb-otg/[OS Installation using Petitboot and USB OTG^]
+* https://www.home-assistant.io/common-tasks/os#flashing-an-odroid-n2[Flashing an ODROID-N2+^]
 
 //--
 
@@ -32,6 +33,9 @@ endif::[]
 IMPORTANT: Niemals das emmc-Modul entfernen oder einstecken, wenn der odroid eingeschalten ist. Es könnte ein Hardware Defekt auftreten.
 
 image::N2-OS-installation-using-Petitboot-figure-1.jpg[]
+
+
+image::exit-to-shell.png[]
 
 
 * Exit to shell
@@ -66,14 +70,173 @@ image::etcher-07.png[]
 
 ====
 
+* USB-Kabel entfernen
+
+* Stromversorgung am odroid n2+ entfernen
+
+* Schalter von SPI auf MMC umschalten (von oben gesehen: auf rechts)
+
+== Erster Start von Home Assistant
+
+image::ha-onboarding-screen.png[]
+
+image::ha-onboarding-screen-2.png[]
+
+.additional screens
+[%collapsible]
+====
+
+image::ha-onboarding-screen-3.png[]
+
+image::ha-onboarding-screen-4.png[]
+
+====
+
+image::ha-start-screen.png[]
+
+=== Sprache Deutsch einstellen
+
+* Falls noch nicht deutsch:
+** Settings - System - General - Language -> Deutsch
+** kbd:[UPDATE]
+** Ev. im Browser die bevorzugte Sprache einstellen
+
+
+=== Erweiterten Modus einstellen
+
+Profil - Erweiterter Modus: ein
+
 
 == Add-Ons
 
+=== Add-On Store
+
+image::ha-add-ons-1.png[]
+
+image::ha-add-ons-2.png[]
+
+image::ha-add-ons-3.png[]
+
+
+
+=== SSH/SFTP
+
+image::addon-ssh-web-terminal.png[]
+
+image::addon-ssh-web-terminal-2.png[]
+
+image::addon-ssh-web-terminal-3.png[]
+
+==== Password setzen
+
+image::addon-ssh-web-terminal-4.png[]
+
+.Für sftp muss der username root sein
+image::addon-ssh-web-terminal-5.png[]
+
+
+* kbd:[SPEICHERN]
+
+* Entwicklerwerkzeuge - kbd:[NEU STARTEN]
+
+==== Fehlermeldungen
+
+image::addon-ssh-web-terminal-6.png[]
+
+.Terminal ausprobieren
+image::addon-ssh-web-terminal-7.png[]
+
+.Fehlerlog ist jetzt auch ok
+image::addon-ssh-web-terminal-8.png[]
+
+==== SFTP testen
+
+image::addon-ssh-web-terminal-9.png[]
+
+=== Home Assistant Community Store (HACS)
+
+* https://hacs.xyz/docs/setup/download/
+
+image::addon-hacs-1.png[]
+
+image::addon-hacs-2.png[]
+
+* Entwicklerwerkzeuge - kbd:[NEU STARTEN]
+
+* Cache leeren
+
+image::addon-hacs-3.png[]
+
+* Einstellungen - Geräte und Dienste - kbd:[INTEGRATION HINZUFÜGEN]
+
+* "HACS" im Suchfeld eingeben
+
+image::addon-hacs-4.png[]
+
+image::addon-hacs-5.png[]
+
+image::addon-hacs-6.png[]
+
+image::addon-hacs-7.png[]
+
+image::addon-hacs-8.png[]
+
+image::addon-hacs-9.png[]
+
+=== Visual Studio Code
+
+* Nachdem nun der HACS installiert wurde, können wir ihn auch benutzen.
+
+* HACS - Add-ons - kbd:[GO NOW] - kbd:[ADD-ON STORE]
+
+image::addon-vscode-1.png[]
+
+image::addon-vscode-2.png[]
+
+* kbd:[INSTALLIEREN]
+
+image::addon-vscode-3.png[]
+
+image::addon-vscode-4.png[]
+
+* alle Optionen aktivieren
+
+* kbd:[STARTEN]
+
+.Hier kann man die config-dateien editieren
+image::addon-vscode-5.png[]
+
 === Samba share
 
+* Einstellungen - Add-ons - kbd:[ADD-ON STORE]
+
+image::addon-samba-01.png[]
+
+image::addon-samba-02.png[]
+
+* kbd:[INSTALL]
+
+image::addon-samba-03.png[]
+
+* kbd:[START]
+
+image::addon-samba-04.png[]
+
+* Entwicklerwerkzeuge - kbd:[NEU STARTEN]
+
+image::addon-samba-05.png[]
+
+image::addon-samba-06.png[]
+
+image::addon-samba-07.png[]
+
+
+
+[%collapsible]
+====
 [source,yaml]
 ----
-username: leo01
+username: leo
 password: passme
 workgroup: WORKGROUP
 compatibility_mode: false
@@ -89,9 +252,57 @@ allow_hosts:
   - 192.168.0.0/16
   - fe80::/10
 ----
+====
+
+* kbd:[SPEICHERN]
+
+* Tab "Informationen"
+
+* kbd:[STARTEN]
+
+image::addon-samba-08.png[]
+
+==== Samba testen
+
+image::addon-samba-13.png[]
+
+[%collapsible]
+====
+
+image::addon-samba-09.png[]
+
+image::addon-samba-10.png[]
+
+image::addon-samba-11.png[]
+
+image::addon-samba-12.png[]
+
+====
+
+
+
 
 === mosquitto broker
 
+* Einstellungen - Add-ons - kbd:[ADD-ON STORE]
+
+image::addon-mqtt-1.png[]
+
+image::addon-mqtt-2.png[]
+
+* kbd:[INSTALLIEREN]
+
+image::addon-mqtt-3.png[]
+
+* Entwicklerwerkzeuge - kbd:[NEU STARTEN]
+
+* Einstellungen - Add-ons - Mosquitto broker
+
+image::addon-mqtt-4.png[]
+
+* Tab "Konfiguration" - Hamburger - Als YAML bearbeiten
+
+.KEINE User anlegen (logins)
 [source,yaml]
 ----
 logins: []
@@ -103,6 +314,95 @@ customize:
   folder: mosquitto
 ----
 
+==== mqtt testen
+
+image::addon-mqtt-5.png[]
+
+image::addon-mqtt-6.png[]
+
+
+=== EspHome
+
+* Einstellungen - Add-ons - kbd:[ADD-ON STORE]
+
+* ESPHome
+
+image::addon-esphome-1.png[]
+
+
+* kbd:[INSTALLIEREN]
+
+image::addon-esphome-2.png[]
+
+* ein paar Sekunden warten (ev. Log kontrollieren)
+
+image::addon-esphome-3.png[]
+
+image::addon-esphome-4.png[]
+
+=== NodeRed
+
+* Einstellungen - Add-ons - kbd:[ADD-ON STORE]
+
+* Node-Red
+
+image::addon-nodered-1.png[]
+
+* kbd:[INSTALLIEREN]
+
+image::addon-nodered-2.png[]
+
+* kbd:[STARTEN]
+
+image::addon-nodered-3.png[]
+
+* Tab "Konfiguration" - Hamburger - Als YAML bearbeiten
+
+.Original
+[source,yaml]
+----
+certfile: fullchain.pem
+credential_secret: ""
+http_node:
+  password: ""
+  username: ""
+http_static:
+  password: ""
+  username: ""
+init_commands: []
+keyfile: privkey.pem
+npm_packages: []
+ssl: true
+system_packages: []
+theme: default
+----
+
+.angepaßt
+[source,yaml]
+----
+certfile: fullchain.pem
+credential_secret: "passme"
+http_node:
+  password: ""
+  username: ""
+http_static:
+  password: ""
+  username: ""
+init_commands: []
+keyfile: privkey.pem
+npm_packages: []
+ssl: false
+system_packages: []
+theme: default
+----
+
+* kbd:[SPEICHERN]
+#
+* kbd:[NEU STARTEN]
+
+image::addon-nodered-4.png[]
+
+////
 === vsFTPD
 
 [source,yaml]
@@ -131,9 +431,10 @@ users:
     password: passme
     share: true
     ssl: false
-    username: leo01
+    username: leo
 ----
 
+////
 
 == Restore eines Backups
 
