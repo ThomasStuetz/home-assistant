@@ -402,6 +402,79 @@ theme: default
 
 image::addon-nodered-4.png[]
 
+
+=== Node-Red-Companion
+
+* ermöglicht den Zugriff auf HA-Entities von NodeRed aus
+* Viele neue Nodes
+* Verwendung von HA-Services
+* Definition eigener Sensors/Actors in Node-Red
+* Alternative Möglichkeit Automatisierungen zu erstellen
+
+
+[%collapsible]
+====
+image::addon_nodered_05.png[]
+image::addon_nodered_06.png[]
+image::addon_nodered_07.png[]
+image::addon_nodered_08.png[]
+image::addon_nodered_09.png[]
+image::addon_nodered_10.png[]
+image::addon_nodered_11.png[]
+image::addon_nodered_12.png[]
+====
+
+image::addon_nodered_13.png[]
+
+==== Palette öffnen
+
+image::addon_nodered_14.png[]
+
+==== Kontrolle, ob Node installiert ist
+
+* node-red-contrib-home-assistant-websocket
+
+image::addon_nodered_15.png[]
+
+.Check in Installation-Tab
+[%collapsible]
+====
+image::addon_nodered_16.png[]
+====
+
+
+
+=== UI Lovelace Minimalist
+
+==== Download
+
+[%collapsible]
+====
+image::addon-ui-lovelace-minimalist-01.png[]
+image::addon-ui-lovelace-minimalist-02.png[]
+image::addon-ui-lovelace-minimalist-03.png[]
+image::addon-ui-lovelace-minimalist-04.png[]
+====
+image::addon-ui-lovelace-minimalist-05.png[]
+
+* Entwicklerwerkzeuge - kbd:[NEU STARTEN]
+
+==== Installation
+
+image::addon-ui-lovelace-minimalist-06.png[]
+image::addon-ui-lovelace-minimalist-07.png[]
+image::addon-ui-lovelace-minimalist-08.png[]
+image::addon-ui-lovelace-minimalist-09.png[]
+image::addon-ui-lovelace-minimalist-10.png[]
+image::addon-ui-lovelace-minimalist-11.png[]
+image::addon-ui-lovelace-minimalist-12.png[]
+image::addon-ui-lovelace-minimalist-13.png[]
+image::addon-ui-lovelace-minimalist-14.png[]
+image::addon-ui-lovelace-minimalist-15.png[]
+image::addon-ui-lovelace-minimalist-16.png[]
+image::addon-ui-lovelace-minimalist-17.png[]
+
+
 ////
 === vsFTPD
 
@@ -442,6 +515,8 @@ users:
 
 image::create-user.png[]
 
+
+== Updates installieren
 
 
 
