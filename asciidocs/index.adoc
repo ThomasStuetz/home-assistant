@@ -482,7 +482,14 @@ https://community.home-assistant.io/t/mushroom-not-loaded/487820/8[siehe hier^]
 
 image::mushroom-16.png[]
 
+* Mein Rezept:
+** Device neu booten
+** Meist ist dann schon ein Fehler sichtbar, dass Mushroom nicht geladen ist
+** Neu downloaden
+
 === UI Lovelace Minimalist
+
+IMPORTANT: Dieses Theme erst installieren, wenn man ein Home Assistant Profi ist!
 
 ++++
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A0fMt8IRKoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
