@@ -460,7 +460,8 @@ image::mushroom-05.png[]
 ==== Download Mushroom Theme
 
 image::mushroom-06.png[]
-image::mushroom-07.png[]
+
+image::mushroom-07a.png[]
 
 ==== Create Dashboard
 
