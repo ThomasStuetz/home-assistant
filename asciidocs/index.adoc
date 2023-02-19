@@ -5,7 +5,7 @@ ifndef::imagesdir[:imagesdir: images]
 :icons: font
 :sectnums:    // Nummerierung der Überschriften / section numbering
 :toc:
-:toclevels: 3
+:toclevels: 4
 :experimental:
 //https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74?permalink_comment_id=3948218
 ifdef::env-github[]
@@ -442,11 +442,52 @@ image::addon_nodered_15.png[]
 image::addon_nodered_16.png[]
 ====
 
+=== Mushroom and Mushroom Theme
 
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gouMnPxYHDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+++++
+
+
+==== Download Mushroom
+
+image::mushroom-01.png[]
+image::mushroom-02.png[]
+image::mushroom-03.png[]
+image::mushroom-04.png[]
+image::mushroom-05.png[]
+
+==== Download Mushroom Theme
+
+image::mushroom-06.png[]
+image::mushroom-07.png[]
+
+==== Create Dashboard
+
+image::mushroom-08.png[]
+image::mushroom-09.png[]
+image::mushroom-10.png[]
+image::mushroom-11.png[]
+image::mushroom-12.png[]
+image::mushroom-13.png[]
+image::mushroom-14.png[]
+image::mushroom-15.png[]
+
+
+==== Troubleshooting
+
+* Falls die Mushroom - Karten nicht aufzufinden sind, einfach die Integration löschen und neu herunterladen.
+https://community.home-assistant.io/t/mushroom-not-loaded/487820/8[siehe hier^]
+
+image::mushroom-16.png[]
 
 === UI Lovelace Minimalist
 
-==== Download
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A0fMt8IRKoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+++++
+
+==== Download of UI Lovelace Minimalist
 
 [%collapsible]
 ====
@@ -456,12 +497,166 @@ image::addon-ui-lovelace-minimalist-03.png[]
 image::addon-ui-lovelace-minimalist-04.png[]
 ====
 image::addon-ui-lovelace-minimalist-05.png[]
+image::addon-ui-lovelace-minimalist-05a.png[]
 
 * Entwicklerwerkzeuge - kbd:[NEU STARTEN]
 
-==== Installation
+====  Install Prerequesits
 
-image::addon-ui-lovelace-minimalist-06.png[]
+* First we have to install these integrations to get the cards for the new UI.
+
+image::addon-ui-lovelace-minimalist-00-prerequesits.png[]
+
+===== browser-mod
+
+* browser-mod is a integration (no frontend)
+
+image::browser-mod-01.png[]
+
+.Installation Details
+[%collapsible]
+====
+image::browser-mod-02.png[]
+image::browser-mod-03.png[]
+image::browser-mod-04.png[]
+====
+
+
+
+===== button-card
+
+* button-card is a frontend integration
+
+IMPORTANT: Use the Frontend-tab
+
+image::button-card-01.png[]
+image::button-card-02.png[]
+
+
+.Installation Details
+[%collapsible]
+====
+image::button-card-03.png[]
+image::button-card-04.png[]
+====
+
+
+===== lovelace-auto-entities
+
+image::auto-entities-01.png[]
+
+
+.Installation Details
+[%collapsible]
+====
+image::auto-entities-02.png[]
+image::auto-entities-03.png[]
+image::auto-entities-04.png[]
+====
+
+
+
+
+===== lovelace-card-mod
+
+image::lovelace-card-mod-01.png[]
+
+
+.Installation Details
+[%collapsible]
+====
+image::lovelace-card-mod-02.png[]
+image::lovelace-card-mod-03.png[]
+image::lovelace-card-mod-04.png[]
+====
+
+
+===== mini-graph-card
+
+image::mini-graph-card-01.png[]
+
+
+.Installation Details
+[%collapsible]
+====
+image::mini-graph-card-02.png[]
+image::mini-graph-card-03.png[]
+image::mini-graph-card-04.png[]
+====
+
+
+===== mini-media-player
+
+image::mini-media-player-01.png[]
+
+
+.Installation Details
+[%collapsible]
+====
+image::mini-media-player-02.png[]
+image::mini-media-player-03.png[]
+image::mini-media-player-04.png[]
+====
+
+
+===== my-cards-slider-card
+
+* Installiere eine benutzerdefiniertes Repository  (https://github.com/AnthonMS/my-cards/issues/17[Anleitung^])
+
+image::lovelace-my-cards-01.png[]
+image::lovelace-my-cards-02.png[]
+image::lovelace-my-cards-03.png[]
+
+* Now install the cards
+
+image::lovelace-my-cards-04.png[]
+
+
+
+.Installation Details
+[%collapsible]
+====
+image::lovelace-my-cards-05.png[]
+image::lovelace-my-cards-06.png[]
+image::lovelace-my-cards-07.png[]
+====
+
+
+===== light-entity-card
+
+image::light-entity-card-01.png[]
+
+
+.Installation Details
+[%collapsible]
+====
+image::light-entity-card-02.png[]
+image::light-entity-card-03.png[]
+image::light-entity-card-04.png[]
+====
+
+===== simple-weather-card
+
+image::simple-weather-card-01.png[]
+
+.Installation Details
+[%collapsible]
+====
+image::simple-weather-card-02.png[]
+image::simple-weather-card-03.png[]
+image::simple-weather-card-04.png[]
+====
+
+
+image::restart.png[]
+
+
+
+==== Installation of UI Lovelace Minimalist
+
+image::devices-and-services.png[]
+
+//image::addon-ui-lovelace-minimalist-06.png[]
 image::addon-ui-lovelace-minimalist-07.png[]
 image::addon-ui-lovelace-minimalist-08.png[]
 image::addon-ui-lovelace-minimalist-09.png[]
@@ -472,7 +667,40 @@ image::addon-ui-lovelace-minimalist-13.png[]
 image::addon-ui-lovelace-minimalist-14.png[]
 image::addon-ui-lovelace-minimalist-15.png[]
 image::addon-ui-lovelace-minimalist-16.png[]
+
+==== Configuration of UI Lovelace Minimalist
+
+* Check "Erstellung eines Eintrags in der Seitenleiste aktivieren"
+
 image::addon-ui-lovelace-minimalist-17.png[]
+
+IMPORTANT: Es wird empfohlen, zunächst "minimalist-desktop" zu verwenden und später auf "minimalist-mobile" umzusteigen.
+
+image::addon-ui-lovelace-minimalist-18.png[]
+
+* Kontrolliere, ob der Pfad zum Themes-Ordner eingetragen ist
+
+image::addon-ui-lovelace-minimalist-19.png[]
+
+image::restart.png[]
+
+
+IMPORTANT: auch hier wird empfohlen, zunächst "minimalist-desktop" zu verwenden und später auf "minimalist-mobile" umzusteigen.
+
+image::addon-ui-lovelace-minimalist-20.png[]
+image::addon-ui-lovelace-minimalist-21.png[]
+
+TIP: Hier sollte das oben angeführte Video konsultiert werden, um ein Dashboard zu erstellen.
+
+==== Troubleshooting
+
+image::addon-ui-lovelace-minimalist-22.png[]
+
+TIP: Es wird https://github.com/UI-Lovelace-Minimalist/UI/issues/1047#issuecomment-1312211064[empfohlen^] "Enable adaptive Dashboard with popup splitview" zu deaktivieren und stattdessen "Erstellung eines Eintrags in der Seitenleiste aktivieren" anzuwählen.
+
+image::addon-ui-lovelace-minimalist-23.png[]
+
+
 
 
 ////
