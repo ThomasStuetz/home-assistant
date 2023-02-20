@@ -756,6 +756,24 @@ image::create-user.png[]
 
 == Updates installieren
 
+== Home Assistant restarten (ohne boot)
+
+
+image::restart.png[]
+
+Entwicklerwerkzeuge - kbd:[NEU STARTEN]
+
+== System neu booten
+
+* Einstellungen - System - Hardware
+
+image::boot-01.png[]
+
+image::boot-02.png[]
+
+== Supervisor Logs
+
+* http://homeassistant.local:8123/hassio/system
 
 
 
