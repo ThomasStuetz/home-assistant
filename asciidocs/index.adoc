@@ -436,7 +436,7 @@ image::addon_nodered_14.png[]
 
 image::addon_nodered_15.png[]
 
-.Check in Installation-Tab
+.Kontrolliere in Installation-Tab, ob node enthalten ist
 [%collapsible]
 ====
 image::addon_nodered_16.png[]
@@ -485,7 +485,9 @@ image::mushroom-16.png[]
 * Mein Rezept:
 ** Device neu booten
 ** Meist ist dann schon ein Fehler sichtbar, dass Mushroom nicht geladen ist
-** Neu downloaden
+** "Erneut herunterladen"
+
+image::mushroom-17.png[]
 
 === UI Lovelace Minimalist
 
